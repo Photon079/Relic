@@ -1,0 +1,14 @@
+# Relic backend dependencies (Python 3.12). Pinned to the versions validated
+# during development. Install: pip install -r backend/requirements.txt
+
+# Graph + memory engine
+cognee==1.2.2
+
+# Local, offline embeddings (no API key / rate limits)
+fastembed==0.8.0
+
+# GitHub GraphQL ingestion
+httpx==0.28.1
+
+# .env loading
+python-dotenv==1.2.2

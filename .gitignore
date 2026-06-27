@@ -1,48 +1,83 @@
-# --- Relic ignores ---
+# ======================================================================
+# Relic .gitignore
+# ======================================================================
 
-# PRD / internal docs
+# --- PRD / internal docs (do not publish) -----------------------------
+prd.md
+PRD.md
 relic_prd.md
 *_prd.md
+*.prd.md
 
-# Installers / binaries
-Claude Setup.exe
-*.exe
-
-# Secrets / env
+# --- Secrets / env ----------------------------------------------------
 .env
 .env.*
 !.env.example
 
-# Python
+# --- Python -----------------------------------------------------------
 __pycache__/
 *.py[cod]
+*$py.class
 *.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+wheels/
+.installed.cfg
+
+# Virtual environments
 .venv/
 venv/
 env/
+ENV/
+
+# Test / type / lint caches
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.cache/
 
-# Cognee local data / caches
+# --- Cognee local data / model & vector caches ------------------------
 .cognee/
+.cognee_system/
+.cognee_cache/
 cognee_data/
 *.db
 *.sqlite
 *.sqlite3
 
-# Node / frontend
+# fastembed / HF model downloads (if cached into the repo)
+.fastembed_cache/
+models/
+
+# --- Node / frontend --------------------------------------------------
 node_modules/
-dist/
-build/
 .vite/
+.next/
+out/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Editor / OS
+# --- Installers / binaries --------------------------------------------
+*.exe
+Claude Setup.exe
+
+# --- Logs -------------------------------------------------------------
+*.log
+logs/
+
+# --- Editor / OS ------------------------------------------------------
 .vscode/
 .idea/
+*.swp
+*.swo
 .DS_Store
 Thumbs.db
 desktop.ini
