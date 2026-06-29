@@ -1,6 +1,10 @@
 # Relic backend dependencies (Python 3.12). Pinned to the versions validated
 # during development. Install: pip install -r backend/requirements.txt
 
+# HTTP API
+fastapi==0.138.1
+uvicorn==0.49.0
+
 # Graph + memory engine
 cognee==1.2.2
 
